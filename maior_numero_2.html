@@ -1,0 +1,20 @@
+<meta charset="UTF-8">
+<script>
+    /*Peça para o usuário informar três números e diga qual dos três é o maior número
+*/
+    const primerioNumero = Number(prompt("insira um número").trim());
+    const segundoNumero = Number(prompt("insira outro número").trim());
+    const terceiroNumero = Number(prompt("insira um número diferente dos anteriores "));
+
+    if(primerioNumero > segundoNumero && primerioNumero > terceiroNumero){
+        alert(`O maior número entre eles é o ${primerioNumero}`)
+    }
+    else if(segundoNumero > primerioNumero && segundoNumero > terceiroNumero){
+        alert(`O maior número entre eles é o ${segundoNumero}`)
+    }
+    else if(terceiroNumero > primerioNumero && terceiroNumero > segundoNumero){
+        alert(`O maior número entre eles é o ${terceiroNumero}`)
+    }
+
+</script>
+
