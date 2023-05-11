@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+<script>
+    /*Peça para o usuário informar três números e identifique qual o menor número.*/
+    //entrada
+
+    const numeroUm = Number(prompt("Insira um número").trim().replace(",", "."));
+    const numeroDois = Number(prompt("Insira outro número").trim().replace(",", "."));
+    const numeroTres = Number(prompt("Insira outro número diferente dos anteriores").trim().replace(",", "."));
+
+    //processamento
+
+    if(numeroUm < numeroDois && numeroUm < numeroTres){
+        alert(`O número ${numeroUm} é o menor entre eles`)
+    }
+    else if(numeroDois < numeroUm && numeroDois < numeroTres){
+        alert(`O número ${numeroDois} é o menor entre eles`)
+    }
+    else if(numeroTres < numeroUm && numeroDois < numeroDois){
+        alert(`O número ${numeroTres} é o menor`)
+    }
+    else if(numeroUm === numeroDois || numeroUm === numeroTres || numeroDois === numeroTres){
+        alert(`Dois desses números são iguais, recarregue a página e insra 3 númerros diferentes`)
+    }
+    else if( isNaN(numeroUm) === true || isNaN(numeroDois) === true || isNaN(numeroTres) === true)  {
+        alert(`você inseriu letras, recarregue a página novamente e insira números.`)
+    }
+    else{
+        alert(`Todos os números que você insieriu são iguais, recarregue a página e insira três números diferrentes`)
+    }
+
+
+</script>
