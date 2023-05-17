@@ -15,6 +15,12 @@
     else if(terceiroNumero > primerioNumero && terceiroNumero > segundoNumero){
         alert(`O maior número entre eles é o ${terceiroNumero}`)
     }
+    else if(!isNaN(primerioNumero) || !isNaN(segundoNumero) || !isNaN(terceiroNumero)){
+        alert(`Você não inseriu apenas números, recarregue a página e responda novamente`)
+    }
+    else {
+        alert(`Você inseriu um caractere inválido, recarregue a página e responda novamente`)
+    }
 
 </script>
 
