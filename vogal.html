@@ -3,14 +3,18 @@
     /*Peça para o usuário informar uma letra e diga se esta letra é uma vogal ou uma consoante.*/
 
     const vogal = prompt("insira uma letra").trim().toUpperCase().replace(",", ".")
-
-    if (vogal == "A" || vogal == "E" || vogal == "I" || vogal == "O" || vogal == "U") {
-        alert(`Essa letra é uma vogal`)
+    if (vogal.length == 1){
+        if (vogal == "A" || vogal == "E" || vogal == "I" || vogal == "O" || vogal == "U") {
+            alert(`Essa letra é uma vogal`)
+        }
+        else if (isNaN(vogal)) {
+            alert(`Essa letra é uma consoante`)
+        }
+        else {
+            alert("você inseriu um número ou caractere inválido").replace(".", ",")
+        }
     }
-    else if(isNaN(vogal)) {
-        alert(`Essa letra é uma consoante`)
-    }
-    else {
-        alert(`Você inseriu um número ou um caractere errado, recarregue a página e insira uma letra.`)
-    }
+        else {
+            alert(`Você inseriu um número, um caractere invalido, ou uma palavra, recarregue a página e insira uma letra.`)
+        }
 </script>
