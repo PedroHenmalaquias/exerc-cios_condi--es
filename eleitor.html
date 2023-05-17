@@ -4,8 +4,20 @@
 
     const eleitor = Number(prompt("insira sua idade(apenas o número, exemplo: 12)").trim())
 
-    if(eleitor >= 16) {
-        alert(`Você já está apto a votar`)
+    if (eleitor >= 16) {
+        const titulo = prompt(`Você já tem título de eleitor?(responda sim ou não)`).trim().toUpperCase()
+        if (titulo == "SIM") {
+            alert("então você já está apto a votar")
+        }
+        else if(titulo == "NÃO") {
+            alert("você precisa tirar o título de eleitor para se tornar apto a votar")
+        }
+        else if(!isNaN(titulo)){
+            alert("você inseriu um número recarregue a página e responda novamente")
+        }
+        else {
+            alert("você inseriu um caractere inválido, recarregue a página e responda novamente")
+        }
     }
     else {
         alert(`Você ainda não está apto a votar`)
